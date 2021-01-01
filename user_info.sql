@@ -13,20 +13,38 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `examiners`
 --
-
-CREATE TABLE 'examiners'(
-	'username' varchar(100) NOT NULL;
-	'password' varchar(1000) NOT NULL;
-	'full_name' varchar(100) NOT NULL;
+CREATE TABLE examiners(
+	tid INT(10)  NOT NULL AUTO_INCREMENT,
+	username varchar(100) NOT NULL,
+	paswd varchar(1000) NOT NULL,
+	full_name varchar(100) NOT NULL,
+	PRIMARY KEY (tid)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
--- Dumping data for table `examiners`
+-- Indexes for table `1st_examiner_marks`
 --
-INSERT into 'examiners' values ('t001','99A0C02B28D4DF6250F38FACBF72319D6DBA2CC54E04929A4438CEBBC4FA2F6BEB372A50D8383BB6B5C71234E2DD78047E72CD47F576575D161F06D6CE0980BC','Examiner_1');
-INSERT into 'examiners' values ('t002','DFB90AFAF78BC5F9CCD89DD02999A8A4C69F198508A19163EC3728B4F56890D7F8FEE81A25831212D84581F013993A91E3DFD5DF84C7D67E776DC5970D7DE432','Examiner_2');
+CREATE TABLE 1st_examiner_marks(
+	id int NOT NULL,
+	ct1 float NOT NULL,
+	final1 float NOT NULL,
+	ct2 float NOT NULL,
+	final2 float NOT NULL,
+	ct3 float NOT NULL,
+	final3 float NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
--- Indexes for table `user`
+-- Indexes for table `2nd_examiner_marks`
 --
-ALTER TABLE `examiners`
-  ADD PRIMARY KEY (`username`);
+CREATE TABLE 2nd_examiner_marks(
+	id int NOT NULL,
+	ct1 float NOT NULL,
+	final1 float NOT NULL,
+	ct2 float NOT NULL,
+	final2 float NOT NULL,
+	ct3 float NOT NULL,
+	final3 float NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- ALTER TABLE examiners ADD PRIMARY KEY (username);
+-- ALTER TABLE `student_info` ADD PRIMARY KEY (`id`);
 COMMIT;
