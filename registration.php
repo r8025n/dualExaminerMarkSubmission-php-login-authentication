@@ -1,10 +1,10 @@
 <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
-    <form name="form1" method="post" action="check_register.php">
+    <form name="form1" method="post" action="check_registration.php">
     <td>
     <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
     <tr>
-    <td colspan="3"><strong>Member Register </strong></td>
+    <td colspan="3"><strong>User Registration </strong></td>
     </tr>
     <tr>
     <td width="78">Full Name</td>
@@ -24,7 +24,7 @@
     <tr>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td><input type="submit" name="Submit" value="Register"></td>
+    <td><input type="submit" name="submit1" value="Register"></td>
     </tr>
     </table>
     </td>

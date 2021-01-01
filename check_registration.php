@@ -3,15 +3,15 @@
 	$servername = "localhost";
 	$username = "admin";
 	$password = "abcd1234";
-	$dbname = "test";
-	$tbl_name="user"; // Table name 
+	$dbname = "DU_IIT";
+	$tbl_name="examiners"; // Table name 
 
 	// Create connection
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	// Check connection
 	if (!$conn) {
 		echo "Database Connection failed ";
-        echo '<a href="register.php"><button>back</button></a>';
+        echo '<a href="registration.php"><button>back</button></a>';
 	}
 
 
@@ -34,14 +34,14 @@
 	#$sql="SELECT * FROM $tbl_name WHERE BINARY username='$myusername' and password='$my_password_hash'";
 
 	$sql = 
-        "INSERT INTO $tbl_name (username, password, full_name)
+        "INSERT INTO $tbl_name (username, paswd, full_name)
 	   VALUES 
     ('$myusername', '$my_password_hash', '$my_fullname')";
 	
     
     if (mysqli_query($conn, $sql)) {
 		echo "Register successfully";
-        echo '<a href="main_login.php"><button>Login</button></a>';
+        echo '<a href="main_login_page.php"><button>Login</button></a>';
 	} else {
 	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
