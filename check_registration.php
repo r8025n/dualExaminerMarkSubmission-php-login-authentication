@@ -1,5 +1,4 @@
 <?php
-
 	$servername = "localhost";
 	$username = "admin";
 	$password = "abcd1234";
@@ -28,11 +27,10 @@
 	$myusername = mysqli_real_escape_string($conn, $myusername);
 	$mypassword = mysqli_real_escape_string($conn, $mypassword);
 	$my_fullname = mysqli_real_escape_string($conn, $my_fullname);
-
+	
     $my_password_hash = hash('sha512', $mypassword);
-
-	#$sql="SELECT * FROM $tbl_name WHERE BINARY username='$myusername' and password='$my_password_hash'";
-
+    echo $my_password_hash;
+	
 	$sql = 
         "INSERT INTO $tbl_name (username, paswd, full_name)
 	   VALUES 
