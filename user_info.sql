@@ -24,7 +24,7 @@ CREATE TABLE examiners(
 -- Indexes for table `1st_examiner_marks`
 --
 CREATE TABLE 1st_examiner_marks(
-	id int NOT NULL,
+	id varchar(20) NOT NULL,
 	ct1 float NOT NULL,
 	final1 float NOT NULL,
 	ct2 float NOT NULL,
@@ -33,10 +33,17 @@ CREATE TABLE 1st_examiner_marks(
 	final3 float NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
+--data dump for table '1st_examiner_marks'
+--
+INSERT INTO 1st_examiner_marks (id) VALUES ('201101');
+INSERT INTO 1st_examiner_marks (id) VALUES ('201102');
+INSERT INTO 1st_examiner_marks (id) VALUES ('201103');
+INSERT INTO 1st_examiner_marks (id) VALUES ('201104');
+INSERT INTO 1st_examiner_marks (id) VALUES ('201105');
 -- Indexes for table `2nd_examiner_marks`
 --
 CREATE TABLE 2nd_examiner_marks(
-	id int NOT NULL,
+	id varchar(20) NOT NULL,
 	ct1 float NOT NULL,
 	final1 float NOT NULL,
 	ct2 float NOT NULL,
@@ -44,6 +51,14 @@ CREATE TABLE 2nd_examiner_marks(
 	ct3 float NOT NULL,
 	final3 float NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- data dump for table '1st_examiner_marks'
+--
+INSERT INTO 2nd_examiner_marks (id) VALUES ('201101');
+INSERT INTO 2nd_examiner_marks (id) VALUES ('201102');
+INSERT INTO 2nd_examiner_marks (id) VALUES ('201103');
+INSERT INTO 2nd_examiner_marks (id) VALUES ('201104');
+INSERT INTO 2nd_examiner_marks (id) VALUES ('201105');
 
 -- ALTER TABLE examiners ADD PRIMARY KEY (username);
 -- ALTER TABLE `student_info` ADD PRIMARY KEY (`id`);
