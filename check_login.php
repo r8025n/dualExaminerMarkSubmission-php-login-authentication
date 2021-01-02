@@ -42,9 +42,8 @@
 
 		$_SESSION['username']=$e_username;
 		$_SESSION['password']=$e_password_hash;
-		$_SESSION['e_id']=$row['tid'];
+		$_SESSION['id']=$row['tid'];
 
-		//echo"<h1> Welcome $myusername </h1>";
 		header("location:login_success.php");
 	}
 
