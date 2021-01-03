@@ -29,11 +29,8 @@
 	$my_fullname = mysqli_real_escape_string($conn, $my_fullname);
 	
     $my_password_hash = hash('sha512', $mypassword);
-    echo $my_password_hash;
 	
-	$sql = 
-        "INSERT INTO $tbl_name (username, paswd, full_name)
-	   VALUES 
+	$sql = "INSERT INTO $tbl_name (username, paswd, full_name) VALUES 
     ('$myusername', '$my_password_hash', '$my_fullname')";
 	
     
