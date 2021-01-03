@@ -21,7 +21,7 @@ CREATE TABLE examiners(
 	PRIMARY KEY (tid)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
--- Indexes for table `1st_examiner_marks`
+-- Table structure for table `1st_examiner_marks`
 --
 CREATE TABLE 1st_examiner_marks(
 	id varchar(20) NOT NULL,
@@ -33,14 +33,15 @@ CREATE TABLE 1st_examiner_marks(
 	final3 float NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
---data dump for table '1st_examiner_marks'
+-- data dump for table '1st_examiner_marks'
 --
 INSERT INTO 1st_examiner_marks (id) VALUES ('201101');
 INSERT INTO 1st_examiner_marks (id) VALUES ('201102');
 INSERT INTO 1st_examiner_marks (id) VALUES ('201103');
 INSERT INTO 1st_examiner_marks (id) VALUES ('201104');
 INSERT INTO 1st_examiner_marks (id) VALUES ('201105');
--- Indexes for table `2nd_examiner_marks`
+--
+-- Table structure for table `1st_examiner_marks`
 --
 CREATE TABLE 2nd_examiner_marks(
 	id varchar(20) NOT NULL,
@@ -52,14 +53,29 @@ CREATE TABLE 2nd_examiner_marks(
 	final3 float NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
--- data dump for table '1st_examiner_marks'
+-- data dump for table '2nd_examiner_marks'
 --
 INSERT INTO 2nd_examiner_marks (id) VALUES ('201101');
 INSERT INTO 2nd_examiner_marks (id) VALUES ('201102');
 INSERT INTO 2nd_examiner_marks (id) VALUES ('201103');
 INSERT INTO 2nd_examiner_marks (id) VALUES ('201104');
 INSERT INTO 2nd_examiner_marks (id) VALUES ('201105');
+--
+-- Table structure for table `final_result` 
+--
+CREATE TABLE final_result(
+	student_id varchar(20) NOT NULL,
+	iit_001 float NOT NULL,
+	iit_002 float NOT NULL,
+	iit_003 float NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- data dump for table 'final_result'
+--
+INSERT INTO final_result (student_id) VALUES ('201101');
+INSERT INTO final_result (student_id) VALUES ('201102');
+INSERT INTO final_result (student_id) VALUES ('201103');
+INSERT INTO final_result (student_id) VALUES ('201104');
+INSERT INTO final_result (student_id) VALUES ('201105');
 
--- ALTER TABLE examiners ADD PRIMARY KEY (username);
--- ALTER TABLE `student_info` ADD PRIMARY KEY (`id`);
 COMMIT;
